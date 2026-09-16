@@ -1,0 +1,4 @@
+import { Link } from 'react-router-dom';
+import { Logo } from '../common/UI';
+import { navigation } from './Navbar';
+export default function Footer() { return <footer><div className="container"><div className="footer-top"><Logo/><nav aria-label="Footer navigation">{navigation.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}</nav><span className="footer-location">Made for the island life.</span></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Lombok Explorer · Demo website</span><div><Link to="/information/privacy">Privacy</Link><Link to="/information/terms">Terms</Link><Link to="/information/cancellation">Cancellation</Link><Link to="/information/responsible-travel">Responsible travel</Link><Link to="/information/photo-credits">Photo credits</Link></div></div></div></footer>; }

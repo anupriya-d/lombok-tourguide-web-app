@@ -1,0 +1,4 @@
+import { Clock3, Mountain, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { money, photo } from '../../data/demo';
+export default function TourCard({ tour }) { return <article className="tour-card"><Link className="tour-image" to={`/tours/${tour.slug}`} tabIndex={-1} aria-hidden="true"><img src={photo(tour.image)} alt="" loading="lazy"/><span className="badge">{tour.badge}</span></Link><div className="tour-content"><h3><Link to={`/tours/${tour.slug}`}>{tour.name}</Link></h3><div className="tour-facts"><span><Clock3/>{tour.duration}</span><span><Mountain/>{tour.difficulty}</span></div><div className="rating"><Star size={14} fill="currentColor"/><strong>{tour.rating}</strong><span>({tour.reviewCount} demo reviews)</span></div><p className="price">From <strong>{money(tour.price)}</strong><small> / person</small></p><Link className="card-button" to={`/tours/${tour.slug}`}>View Details</Link></div></article>; }
