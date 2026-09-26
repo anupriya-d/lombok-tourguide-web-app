@@ -78,3 +78,5 @@ Coverage: homepage rendering, local images, carousel, URL filters and reset, emp
 - Configure the eventual static host to rewrite public application routes to `index.html`. Add the real site origin, Open Graph data and sitemap when deployment details are known.
 
 The original specification and UI reference are preserved unchanged.
+
+///
